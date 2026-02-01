@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'GuessWhat';
+    src: url('../assets/fonts/Guesswhat-Exceptional.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     /* Colors - Dark Mode First */
     --primary: #2E7D32;
@@ -349,15 +357,15 @@ nav .container {
 
 .contact-link:hover {
     background: var(--primary);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(76, 175, 80, 0.2);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(76, 175, 80, 0.4);
 }
 
 /* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(40px);
     }
 
     to {
@@ -369,7 +377,7 @@ nav .container {
 @keyframes scaleIn {
     from {
         opacity: 0;
-        transform: scale(0.9);
+        transform: scale(0.8);
     }
 
     to {
@@ -378,32 +386,60 @@ nav .container {
     }
 }
 
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 .animate-fade-up {
-    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-scale-in {
-    animation: scaleIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: scaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .hero-content {
     opacity: 0;
-    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
 }
 
 .hero-image {
     opacity: 0;
-    animation: scaleIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+    animation: scaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+
+.hero-image img {
+    animation: float 6s ease-in-out infinite;
 }
 
 .feature-card {
     transition: var(--transition);
+    border: 1px solid transparent;
 }
 
 .feature-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary-light);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transform: translateY(-15px) scale(1.02);
+    border-color: rgba(76, 175, 80, 0.5);
+    background: var(--bg-tertiary);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 20px rgba(76, 175, 80, 0.1);
+}
+
+.feature-card img {
+    transition: var(--transition);
+}
+
+.feature-card:hover img {
+    transform: scale(1.05);
 }
 
 footer .logo span {
@@ -507,6 +543,7 @@ footer {
 }
 
 /* Dark Mode Overrides for text contrast */
-[dir="rtl"] {
-    font-family: -apple-system, "Amiri", serif;
+[dir="rtl"],
+[dir="rtl"] body {
+    font-family: 'GuessWhat', 'Amiri', serif !important;
 }
