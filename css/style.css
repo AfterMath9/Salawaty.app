@@ -158,6 +158,7 @@ nav .container {
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
+    font-family: 'GuessWhat', 'M PLUS Rounded 1c', sans-serif;
 }
 
 .nav-links img {
