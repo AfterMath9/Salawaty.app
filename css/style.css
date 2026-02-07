@@ -332,6 +332,16 @@ nav .container {
     color: var(--text-secondary);
 }
 
+.contact-section {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.contact-section .contact-link {
+    margin-top: 1.5rem;
+}
+
 .faq-item h4 {
     font-size: 1.25rem;
     font-weight: 700;
