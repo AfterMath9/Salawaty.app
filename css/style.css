@@ -362,6 +362,22 @@ nav .container {
     box-shadow: 0 15px 30px rgba(76, 175, 80, 0.4);
 }
 
+/* Donation Page */
+.donation-qr {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.donation-qr img {
+    width: 220px;
+    max-width: 70vw;
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    background: #ffffff;
+    padding: 12px;
+    box-shadow: var(--shadow-soft);
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
